@@ -1,0 +1,117 @@
+.chat-container {
+  max-width: 700px;
+  margin: auto;
+  color: #f8fafc;
+}
+
+.doctor-select {
+  width: 100%;
+  padding: 10px;
+  margin: 16px 0;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.chat-box {
+  background: linear-gradient(180deg, #0b2a5a, #061a3a);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+}
+
+.messages {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.message {
+  margin-bottom: 0;
+  max-width: 70%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Patient messages (sent) - Right side */
+.message.patient {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #fff;
+  align-self: flex-end;
+  margin-left: auto;
+  border-bottom-right-radius: 4px;
+}
+
+/* Doctor messages (received) - Left side */
+.message.doctor {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  align-self: flex-start;
+  margin-right: auto;
+  border-bottom-left-radius: 4px;
+}
+
+.message span {
+  display: block;
+  line-height: 1.4;
+}
+
+.message small {
+  display: block;
+  font-size: 10px;
+  opacity: 0.7;
+  margin-top: 6px;
+  text-align: right;
+}
+
+.message.doctor small {
+  text-align: left;
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #334155;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+}
+
+.chat-input button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.empty {
+  text-align: center;
+  opacity: 0.7;
+}

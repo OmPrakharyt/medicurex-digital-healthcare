@@ -1,0 +1,80 @@
+/* Unified Card Component Styles */
+
+.card {
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(14, 165, 233, 0.1);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* Card Variants */
+.card--default {
+  background-color: var(--color-surface);
+}
+
+.card--elevated {
+  background-color: var(--color-surface-elevated);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.card--outlined {
+  background-color: transparent;
+  border: 2px solid var(--color-border);
+  box-shadow: none;
+}
+
+/* Hoverable Cards */
+.card--hoverable {
+  cursor: pointer;
+}
+
+.card--hoverable:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(14, 165, 233, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  border-color: rgba(14, 165, 233, 0.3);
+}
+
+.card--hoverable:active {
+  transform: translateY(-1px);
+}
+
+/* Clickable Cards */
+.card--clickable {
+  cursor: pointer;
+}
+
+.card--clickable:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Card Content Structure */
+.card > *:first-child {
+  margin-top: 0;
+}
+
+.card > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Padding */
+@media (max-width: 768px) {
+  .card {
+    padding: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: var(--spacing-md);
+  }
+}
+
